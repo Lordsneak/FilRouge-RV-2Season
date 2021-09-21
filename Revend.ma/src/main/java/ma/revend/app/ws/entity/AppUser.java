@@ -22,7 +22,7 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(unique = false)
+    @Column
     private String userId;
     
     @Column(unique = true) // Switch = True
@@ -34,17 +34,17 @@ public class AppUser {
     @Column
     private boolean actived;
 	
-	@Column(nullable=true)
+	@Column
 	private String emailVerificationToken;
 	
-	@Column(nullable=false)
+	@Column
 	private Boolean emailVerificationStatuts=false;
 	
 	@Email
-	@Column(nullable=false, length=50,unique = false)
+	@Column
 	private String email;
 	
-	@Column(nullable = false, unique = false, length = 120)
+	@Column
 	private String address;
     
     @ManyToMany(fetch = FetchType.EAGER)
@@ -53,18 +53,18 @@ public class AppUser {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userEntity")
     private Set<AdvertEntity> advertEntities;
     
-    @Column(nullable = false)
+    @Column
     private String firstName;
     
-    @Column(nullable = false)
+    @Column
     private String lastName;
 
     
-    @Column(nullable = false)
+    @Column
     private String type;
     
 
-	@Column(nullable=false)
+	@Column
 	private Boolean userValid = false;
 
 	

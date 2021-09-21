@@ -18,7 +18,7 @@ public class RevendApplication {
 		SpringApplication.run(RevendApplication.class, args);
 	}
 	
- /*  @Bean
+ /* @Bean
     CommandLineRunner start(AccountService accountService){
         return args->{
             accountService.save(new AppRole(null,"USER"));
@@ -31,8 +31,8 @@ public class RevendApplication {
             });
             accountService.addRoleToUser("admin","ADMIN");
         };
-    } */
-	
+    } 
+	*/
 	@Bean
 	public SpringApplicationContext springApplicationContext() {
 		return new SpringApplicationContext();

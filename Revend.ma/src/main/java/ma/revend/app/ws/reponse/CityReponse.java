@@ -9,16 +9,8 @@ import lombok.ToString;
 @AllArgsConstructor 
 @NoArgsConstructor 
 @ToString
-public class UserResponse {
+public class CityReponse {
 	
-	private String userId;
-	private String username;
-	private String email;
-	private String address;
-	private String firstName;
-	private String lastName;
-	
-	
-	
-	
+	private String cityId;
+	private String name;
 }

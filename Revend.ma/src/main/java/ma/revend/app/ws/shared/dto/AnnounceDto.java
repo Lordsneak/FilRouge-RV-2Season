@@ -21,6 +21,10 @@ public class AnnounceDto implements Serializable{
 	private String description;
 	private String image;
 	private int price;
+	//private String city_id;
+	//private String user_id;
+	//private String cat_id;
+	
 	
 	// Foriegn key 
 	//private String categoryId;

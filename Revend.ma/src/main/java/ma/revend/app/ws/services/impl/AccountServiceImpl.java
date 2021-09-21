@@ -28,9 +28,7 @@ public class AccountServiceImpl implements AccountService {
 	
     private AppUserRepository appUserRepository;
     private AppRoleRepository appRoleRepository;
-    
-	@Autowired
-	BCryptPasswordEncoder bCryptPasswordEncoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
     
 	@Autowired
 	Utils util;
@@ -143,7 +141,7 @@ public class AccountServiceImpl implements AccountService {
 			throw new UsernameNotFoundException(id);
 
 		userEntity.setFirstName(userDto.getFirstName());
-		userEntity.setLastName(userDto.getLastname());
+		userEntity.setLastName(userDto.getLastName());
 
 		AppUser userUpdated = appUserRepository.save(userEntity);
 
