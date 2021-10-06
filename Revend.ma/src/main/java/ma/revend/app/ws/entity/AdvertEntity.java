@@ -29,29 +29,34 @@ public class AdvertEntity implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id;
+	
 	@Column(nullable = false)
 	private String advertId;
+	
 	@Column(nullable = false)
 	private String title;
+	
 	@Column(nullable = false)
 	private String description;
+	
 	@Column(nullable = false)
 	private String price;
+	
 	@Column(nullable = false)
 	private String image;
 	
 	@ManyToOne
-    @JoinColumn(name = "city_id", nullable = false)
+    @JoinColumn(name = "cityId")
     private CityEntity cityEntity;
 
 	// UserID
 	
 	@ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "userId")
     private AppUser userEntity;
 
     @ManyToOne
-    @JoinColumn(name = "cat_id", nullable = false)
+    @JoinColumn(name = "categoryId")
     private CategoryEntity category;
     
     

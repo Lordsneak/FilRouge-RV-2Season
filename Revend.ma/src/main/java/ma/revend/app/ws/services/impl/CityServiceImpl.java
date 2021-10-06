@@ -11,12 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import ma.revend.app.ws.entity.CategoryEntity;
 import ma.revend.app.ws.entity.CityEntity;
 import ma.revend.app.ws.repository.CityRepository;
 import ma.revend.app.ws.services.CityService;
 import ma.revend.app.ws.shared.Utils;
-import ma.revend.app.ws.shared.dto.CategoryDto;
 import ma.revend.app.ws.shared.dto.CityDto;
 
 @Service

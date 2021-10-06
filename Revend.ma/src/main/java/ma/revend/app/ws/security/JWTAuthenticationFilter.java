@@ -49,13 +49,16 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         authResult.getAuthorities().forEach(a->{
             roles.add(a.getAuthority());
         });
-        String jwt= JWT.create()
+        String token= JWT.create()
                 .withIssuer(request.getRequestURI())
                 .withSubject(user.getUsername())
                 .withArrayClaim("roles",roles.toArray(new String[roles.size()]))
                 .withExpiresAt(new Date(System.currentTimeMillis()+SecurityParams.EXPIRATION))
                 .sign(Algorithm.HMAC256(SecurityParams.SECRET));
-        response.addHeader(SecurityParams.JWT_HEADER_NAME,jwt);
+        		response.addHeader(SecurityParams.JWT_HEADER_NAME,token);
+        		
+        		response.getWriter().write("{\"token\": \"" + token + "\", \"username\": \""+ user.getUsername() + "\"}");
+        		
     }
 
 }

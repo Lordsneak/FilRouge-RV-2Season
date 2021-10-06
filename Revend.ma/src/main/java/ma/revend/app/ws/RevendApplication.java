@@ -31,8 +31,7 @@ public class RevendApplication {
             });
             accountService.addRoleToUser("admin","ADMIN");
         };
-    } 
-	*/
+    }*/
 	@Bean
 	public SpringApplicationContext springApplicationContext() {
 		return new SpringApplicationContext();

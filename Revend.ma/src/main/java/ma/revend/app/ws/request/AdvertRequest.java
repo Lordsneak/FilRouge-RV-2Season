@@ -1,24 +1,16 @@
-package ma.revend.app.ws.shared.dto;
-
-import java.io.Serializable;
+package ma.revend.app.ws.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
-
 @Data 
 @AllArgsConstructor 
 @NoArgsConstructor 
 @ToString
-public class AdvertDto implements Serializable{
+public class AdvertRequest {
 
-	private static final long serialVersionUID = 5599002969692637189L;
-
-	private Long id;
-	private String advertId;
 	private String title;
 	private String description;
 	private String price;
@@ -27,9 +19,4 @@ public class AdvertDto implements Serializable{
 	private Long cityId;
 	private Long userId;
 	private Long categoryId;
-
-	
-	
-
-	
 }
